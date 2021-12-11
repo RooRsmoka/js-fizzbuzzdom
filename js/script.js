@@ -9,20 +9,22 @@
 // MILESTONE 3
 // Applico uno stile diverso a seconda del valore dell'indice 
 // (multiplo di 3, multiplo di 5 o multiplo di 3 e 5)
-
-
 const containerHtml = document.querySelector('.container');
 
 
 for (let i = 1; i <= 100; i++) {
 
     if (i % 3 === 0 && i % 5 === 0) {
+        containerHtml.innerHTML += `<div class="box box-red">${'FizzBuzz'}</div>`;
         console.log('FizzBuzz');
     } else if (i % 3 === 0) {
+        containerHtml.innerHTML += `<div class="box box-green">${'Fizz'}</div>`;
         console.log('Fizz');
     } else if (i % 5 === 0) {
+        containerHtml.innerHTML += `<div class="box box-yellow">${'Buzz'}</div>`;
         console.log('Buzz');
     } else {
+        containerHtml.innerHTML += `<div class="box box-blue">${i}</div>`;
         console.log(i);
     }
 };
